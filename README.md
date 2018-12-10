@@ -19,5 +19,5 @@ How To Run
 
 2. Run project by simply click play button in upper left corner. You may need to select scheme as KryProgrammingAssignment and a prefered simulator like Iphone X. 
 
-
-
+example of valid address : https://www.google.com
+example of invalid address : http://www.aftonbladet.se/kulturr

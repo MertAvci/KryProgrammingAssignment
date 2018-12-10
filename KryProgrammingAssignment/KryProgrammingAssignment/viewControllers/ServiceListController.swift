@@ -43,10 +43,7 @@ class ServiceListController: UIViewController, UITableViewDataSource, UITableVie
             guard let services = services else {
                 return
             }
-            self.serviceList.removeAll()
-            for service in services {
-                self.serviceList.append(service)
-            }
+            self.serviceList = services
             self.tableView.reloadData()
         }
     }
@@ -101,16 +98,6 @@ class ServiceListController: UIViewController, UITableViewDataSource, UITableVie
             ServiceStore.sharedInstance.storedServiceList = serviceList
             self.tableView.reloadData()
         }
-    }
-
-
-
-    func addMOCdata() {
-
-        ServiceStore.sharedInstance.storedServiceList = [Service(baseURL:  URL(string: "https://www.dn.se/")!, name: "DN", isAvailable: false, lastUpdate : Date()),
-                                                         Service(baseURL:  URL(string: "https://www.svtplay.se/")!, name: "SVT Play", isAvailable: false, lastUpdate : Date()),
-                                                         Service(baseURL:  URL(string: "https://www.aftonbladet.se/")!, name: "Aftonbladet", isAvailable: false, lastUpdate : Date()),
-                                                         Service(baseURL:  URL(string: "https://google.se/")!, name: "Google", isAvailable: false, lastUpdate : Date())]
     }
 }
 
